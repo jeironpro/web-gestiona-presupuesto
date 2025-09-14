@@ -1,0 +1,183 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Arvo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-ingresos, .contenedor-gastos {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    margin: 20px;
+    width: 300px;
+}
+
+.contenedor-titulo h1 {
+    text-align: center;
+}
+
+.contenedor input {
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0 20px;
+    text-align: center;
+    width: 250px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.boton {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    padding: 5px 10px;
+    width: 130px;
+}
+
+.boton button:hover {
+    background-color: #0056b3;
+}
+
+.contenedor-balances {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 10px;
+    width: 600px;
+}
+
+.totalIngresos,
+.totalGastos,
+.balance {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 700;
+    margin: 0 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.totalIngresos {
+    background-color: rgb(70, 255, 70);
+}
+
+.totalGastos {
+    background-color: rgb(255, 70, 70);
+}
+
+.balance {
+    background-color: rgb(70, 150, 255);
+}
+
+@media screen and (max-width: 650px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(1fr, 600px);
+        margin-top: 0px;
+    }
+
+    .contenedor-ingresos, .contenedor-gastos {
+        margin: 15px;
+        width: 500px;
+    }
+
+    .ingresos, .gastos {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor input {
+        margin: 0;
+        width: 300px;
+    }
+
+    .boton button {
+        width: 150px;
+    }
+
+    .contenedor-balances {
+        width: 510px;
+    }
+    
+    .totalIngresos,
+    .totalGastos,
+    .balance {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .contenedor {
+        grid-template-columns: repeat(1fr, 500px);
+    }
+
+    .contenedor-ingresos, .contenedor-gastos {
+        width: 450px;
+    }
+
+    .contenedor input {
+        height: 26px;
+        width: 220px;
+    }
+
+    .contenedor-balances {
+        width: 450px;
+    }
+    
+    .totalIngresos,
+    .totalGastos,
+    .balance {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor {
+        margin-top: 70px;
+    }
+
+    .contenedor-ingresos, .contenedor-gastos {
+        width: 400px;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 30px;
+    }
+
+    .contenedor-balances {
+        width: 400px;
+    }
+}

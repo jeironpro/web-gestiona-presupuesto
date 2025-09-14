@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesti&oacute;n De Presupuesto</title>
+    <link rel="icon" href="icon/presupuesto.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="contenedor">
+            <div class="contenedor-ingresos">
+                <div class="contenedor-titulo">
+                    <h1>Ingresos</h1>
+                </div>
+                <div class="ingresos">
+                    <input type="number" id="ingresos" placeholder="Agregar Ingresos">
+                </div>
+                <div class="boton">
+                    <button onclick="agregarIngresos()">Agregar Ingresos</button>
+                </div>
+            </div>
+            <div class="contenedor-gastos">
+                <div class="contenedor-titulo">
+                    <h1>Gastos</h1>
+                </div>
+                <div class="gastos">
+                    <input type="number" id="gastos" placeholder="Agregar Gastos">
+                </div>
+                <div class="boton">
+                    <button onclick="agregarGastos()">Agregar Gastos</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-balances">
+            <div class="totalIngresos">
+                <p>Ingresos</p>
+                <p id="totalIngresos">0</p>
+            </div>
+            <div class="totalGastos">
+                <p>Gastos</p>
+                <p id="totalGastos">0</p>
+            </div>
+            <div class="balance">
+                <p>Balance</p>
+                <p id="balance">0</p>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
