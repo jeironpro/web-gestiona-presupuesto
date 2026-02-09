@@ -1,4 +1,4 @@
-# gestiona-presupuesto
+# web-gestiona-presupuesto
 
 ## 📌 Descripción
 Este proyecto forma parte de mi portafolio personal.  
