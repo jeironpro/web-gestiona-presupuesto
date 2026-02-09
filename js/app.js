@@ -1,30 +1,34 @@
 let balanceInicial = 0;
 let gastosTotales = 0;
 
-function agregarIngresos() {
-    const ingresos = parseInt(document.getElementById('ingresos').value);
+const agregarIngresos = () => {
+    const inputIngresos = document.getElementById('ingresos');
+    const ingresos = parseInt(inputIngresos.value) || 0;
     const totalIngresos = document.getElementById("totalIngresos");
+    
     totalIngresos.textContent = ingresos;
     balanceInicial = ingresos;
     actualizarBalance();
     limpiarInput();
-}
+};
 
-function agregarGastos() {
-    const gastos = parseInt(document.getElementById('gastos').value);
+const agregarGastos = () => {
+    const inputGastos = document.getElementById('gastos');
+    const gastos = parseInt(inputGastos.value) || 0;
+    
     balanceInicial -= gastos;
     gastosTotales += gastos; 
     actualizarBalance();
     actualizarGastos();
     limpiarInput();
-}
+};
 
-function actualizarGastos() {
+const actualizarGastos = () => {
     const totalGastos = document.getElementById("totalGastos");
     totalGastos.textContent = gastosTotales;
-}
+};
 
-function actualizarBalance() {
+const actualizarBalance = () => {
     const balance = document.getElementById("balance");
 
     if (balanceInicial <= 0) {
@@ -32,9 +36,9 @@ function actualizarBalance() {
     } else {
         balance.textContent = balanceInicial;
     }
-}
+};
 
-function limpiarInput() {
+const limpiarInput = () => {
     document.getElementById('ingresos').value = '';
     document.getElementById('gastos').value = '';
-}
+};
